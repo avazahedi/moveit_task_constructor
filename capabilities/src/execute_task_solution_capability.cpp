@@ -112,7 +112,34 @@ void ExecuteTaskSolutionCapability::goalCallback(
 		result.error_code = context_->plan_execution_->executeAndMonitor(plan);
 	}
 
-	const std::string response = context_->plan_execution_->getErrorCodeString(result.error_code);
+	// const std::string response = context_->plan_execution_->getErrorCodeString(result.error_code);
+
+	if (result.error_code.val == moveit_msgs::MoveItErrorCodes::SUCCESS)
+		const std::string response = "Success";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::INVALID_GROUP_NAME)
+		const std::string response = "Invalid group name";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::PLANNING_FAILED)
+		const std::string response = "Planning failed.";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::INVALID_MOTION_PLAN)
+		const std::string response = "Invalid motion plan";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::UNABLE_TO_AQUIRE_SENSOR_DATA)
+		const std::string response = "Unable to aquire sensor data";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::MOTION_PLAN_INVALIDATED_BY_ENVIRONMENT_CHANGE)
+		const std::string response = "Motion plan invalidated by environment change";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::CONTROL_FAILED)
+		const std::string response = "Controller failed during execution";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::TIMED_OUT)
+		const std::string response = "Timeout reached";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::PREEMPTED)
+		const std::string response = "Preempted";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::INVALID_GOAL_CONSTRAINTS)
+		const std::string response = "Invalid goal constraints";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::INVALID_OBJECT_NAME)
+		const std::string response = "Invalid object name";
+	else if (result.error_code.val == moveit_msgs::MoveItErrorCodes::FAILURE)
+		const std::string response = "Catastrophic failure";
+	const std::string response = "Unknown event";
+
 
 	if (result.error_code.val == moveit_msgs::MoveItErrorCodes::SUCCESS)
 		as_->setSucceeded(result, response);
