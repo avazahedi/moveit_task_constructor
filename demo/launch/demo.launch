@@ -7,9 +7,21 @@
   </include>
   <param name="move_group/capabilities" value="move_group/ExecuteTaskSolutionCapability" />
 
+  <arg name="load_cloud" default="true"/>
+
   <!-- Run rviz with prepared config -->
-  <include file="$(find j2s7s300_moveit_config)/launch/moveit_rviz.launch">
+  <!-- <include file="$(find j2s7s300_moveit_config)/launch/moveit_rviz.launch">
     <arg name="config" value="false" />
     <arg name="rviz_config" value="$(find moveit_task_constructor_demo)/config/mtc.rviz" />
+  </include> -->
+  
+  <include file="$(find j2s7s300_moveit_config)/launch/moveit_rviz.launch" if="$(arg load_cloud)">
+    <arg name="config" value="false" />
+    <arg name="rviz_config" value="$(find moveit_task_constructor_demo)/config/mtc.rviz" />
+  </include>
+
+  <include file="$(find j2s7s300_moveit_config)/launch/moveit_rviz.launch" unless="$(arg load_cloud)">
+    <arg name="config" value="false" />
+    <arg name="rviz_config" value="$(find moveit_task_constructor_demo)/config/mtc_camera.rviz" />
   </include>
 </launch>
