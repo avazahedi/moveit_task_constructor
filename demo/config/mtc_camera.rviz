@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Motion Planning Tasks1
+        - /TF1
       Splitter Ratio: 0.5393258333206177
     Tree Height: 539
   - Class: rviz/Help
@@ -301,7 +302,7 @@ Visualization Manager:
         camera_depth_optical_frame:
           Value: false
         camera_link:
-          Value: false
+          Value: true
         j2s7s300_end_effector:
           Value: false
         j2s7s300_link_1:
@@ -333,14 +334,14 @@ Visualization Manager:
         j2s7s300_link_finger_tip_3:
           Value: false
         root:
-          Value: false
+          Value: true
         world:
           Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
       Show Arrows: true
-      Show Axes: false
+      Show Axes: true
       Show Names: true
       Tree:
         world:
@@ -385,7 +386,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -397,6 +398,62 @@ Visualization Manager:
       Size (m): 0.009999999776482582
       Style: Flat Squares
       Topic: /camera/depth/color/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2 - segmented
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /segmented_cloud
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /cloud_pcd
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -433,9 +490,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5047977566719055
+      Pitch: 0.36479783058166504
       Target Frame: root
-      Yaw: 3.4349400997161865
+      Yaw: 0.6049404144287109
     Saved: ~
 Window Geometry:
   Displays:
