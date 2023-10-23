@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Motion Planning Tasks1
-        - /TF1
       Splitter Ratio: 0.5393258333206177
     Tree Height: 539
   - Class: rviz/Help
@@ -34,8 +33,8 @@ Panels:
         - 98
       solutions_view_columns: ~
       tasks_view_columns:
-        - 196
-        - 26
+        - 193
+        - 29
         - 26
         - 56
 Preferences:
@@ -285,7 +284,7 @@ Visualization Manager:
       State Display Time: 0.05 s
       Task Solution Topic: /mtc_tutorial/solution
       Tasks:
-        deep_pick_place_task: 0
+        deep_pick_place_task: 10
       Trail Step Size: 1
       Value: true
     - Class: rviz/TF
@@ -293,16 +292,10 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        camera_color_frame:
-          Value: false
-        camera_color_optical_frame:
-          Value: false
-        camera_depth_frame:
-          Value: false
-        camera_depth_optical_frame:
-          Value: false
         camera_link:
           Value: true
+        intm:
+          Value: false
         j2s7s300_end_effector:
           Value: false
         j2s7s300_link_1:
@@ -334,7 +327,7 @@ Visualization Manager:
         j2s7s300_link_finger_tip_3:
           Value: false
         root:
-          Value: true
+          Value: false
         world:
           Value: false
       Marker Alpha: 1
@@ -345,14 +338,10 @@ Visualization Manager:
       Show Names: true
       Tree:
         world:
-          camera_link:
-            camera_color_frame:
-              camera_color_optical_frame:
-                {}
-            camera_depth_frame:
-              camera_depth_optical_frame:
-                {}
           root:
+            intm:
+              camera_link:
+                {}
             j2s7s300_link_base:
               j2s7s300_link_1:
                 j2s7s300_link_2:
@@ -414,7 +403,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -429,7 +418,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -442,7 +431,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -457,7 +446,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -490,9 +479,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.36479783058166504
+      Pitch: 0.33479753136634827
       Target Frame: root
-      Yaw: 0.6049404144287109
+      Yaw: 0.6299232840538025
     Saved: ~
 Window Geometry:
   Displays:

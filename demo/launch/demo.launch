@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="fake_execution" default="true"/>
+
   <!-- Load panda demo with MTC's execution capability -->
   <include file="$(find j2s7s300_moveit_config)/launch/j2s7s300_demo.launch">
     <arg name="use_rviz" value="false"/>
-    <arg name="fake_execution" value="true"/>
+    <arg name="fake_execution" value="$(arg fake_execution)"/>
   </include>
   <param name="move_group/capabilities" value="move_group/ExecuteTaskSolutionCapability" />
 
