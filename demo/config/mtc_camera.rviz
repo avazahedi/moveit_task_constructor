@@ -33,10 +33,10 @@ Panels:
         - 98
       solutions_view_columns: ~
       tasks_view_columns:
-        - 193
-        - 29
+        - 204
         - 26
-        - 56
+        - 26
+        - 48
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -284,7 +284,7 @@ Visualization Manager:
       State Display Time: 0.05 s
       Task Solution Topic: /mtc_tutorial/solution
       Tasks:
-        deep_pick_place_task: 10
+        deep_pick_place_task: 0
       Trail Step Size: 1
       Value: true
     - Class: rviz/TF
@@ -338,10 +338,10 @@ Visualization Manager:
       Show Names: true
       Tree:
         world:
+          intm:
+            camera_link:
+              {}
           root:
-            intm:
-              camera_link:
-                {}
             j2s7s300_link_base:
               j2s7s300_link_1:
                 j2s7s300_link_2:
@@ -479,9 +479,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.33479753136634827
+      Pitch: 0.32479774951934814
       Target Frame: root
-      Yaw: 0.6299232840538025
+      Yaw: 5.543105125427246
     Saved: ~
 Window Geometry:
   Displays:
