@@ -292,10 +292,16 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
         camera_link:
           Value: true
-        intm:
-          Value: false
         j2s7s300_end_effector:
           Value: false
         j2s7s300_link_1:
@@ -338,9 +344,13 @@ Visualization Manager:
       Show Names: true
       Tree:
         world:
-          intm:
-            camera_link:
-              {}
+          camera_link:
+            camera_color_frame:
+              camera_color_optical_frame:
+                {}
+            camera_depth_frame:
+              camera_depth_optical_frame:
+                {}
           root:
             j2s7s300_link_base:
               j2s7s300_link_1:
@@ -479,9 +489,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.32479774951934814
+      Pitch: 0.27979776263237
       Target Frame: root
-      Yaw: 5.543105125427246
+      Yaw: 1.1480909585952759
     Saved: ~
 Window Geometry:
   Displays:
