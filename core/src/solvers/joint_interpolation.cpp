@@ -51,7 +51,7 @@ using namespace trajectory_processing;
 
 JointInterpolationPlanner::JointInterpolationPlanner() {
 	auto& p = properties();
-	p.declare<double>("max_step", 0.1, "max joint step");
+	p.declare<double>("max_step", 0.01, "max joint step"); // 0.1
 }
 
 void JointInterpolationPlanner::init(const core::RobotModelConstPtr& /*robot_model*/) {}
